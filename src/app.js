@@ -2,6 +2,8 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 3000
+
 const geocode = require('./utils/Geocode.js')
 const weather = require('./utils/Weatherstack.js')
 const request = require('postman-request')
@@ -104,6 +106,6 @@ app.get('*', (req, res)=>{
         errorMessage: 'Page not found'
     })
 })
-app.listen(3000, ()=>{
-    console.log('server is running on port 3000')
+app.listen(port, ()=>{
+    console.log('server is running on port '+port)
 })
