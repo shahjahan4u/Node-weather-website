@@ -14,7 +14,7 @@ const weatherRequest = (latitude,longitude, callback)=>{
         }
         else{
         //console.log(response.body.current)
-        callback(undefined,body.current.weather_descriptions[0]+' .It is currently '+body.current.temperature+' degree .It feels like '+body.current.feelslike+' degree out')
+        callback(undefined,body.current.weather_descriptions[0]+' .It is currently '+body.current.temperature+' degree .It feels like '+body.current.feelslike+' degree out.The humidity is '+body.current.humidity+'%')
         }
     })
 }
